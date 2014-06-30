@@ -1,0 +1,15 @@
+/* line 3, ../sass/mySass.sass */
+.hint-block {
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+/* line 7, ../sass/mySass.sass */
+.hint-block img {
+  float: left;
+}
+/* line 9, ../sass/mySass.sass */
+.hint-block div {
+  font-size: 1.8em;
+  color: #b9121b;
+}

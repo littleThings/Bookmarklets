@@ -7,11 +7,27 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-
+    <link rel="stylesheet" type="text/css" href="compass/stylesheets/mySass.css"/>
+    <script type="text/javascript" src="./js/jquery-2.1.0.min.js"></script>
+    <script>
+      $(function(){
+        $('.btn').on('mouseover',function(){
+          $('.hint-block').fadeIn('fast');
+        });
+        $('.btn').on('mouseout',function(){
+          $('.hint-block').fadeOut('fast');
+        })
+      });
+    </script>
     <title>Youtubedownload bookmarklet by littleThings</title>
   </head>
 
   <body>
+    <hint class="hint-block">
+      <img src="img/arrow-3.png" width="60">
+      <div >Drag button to Here!!!</div>      
+    </hint>
+
     <header>
       <div class="container">
         <h1>Youtubedownload bookmarklet</h1>
