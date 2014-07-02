@@ -3,7 +3,6 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
@@ -20,6 +19,10 @@
       });
       /* bookmarklet code
       javascript:(function(){
+        var title = window.location.href;
+        if (title.indexOf('http://yourwebsite/bookmarklet/') == 0) {
+            '<head><link rel=\'icon\' href=\'http://static.clipconverter.cc/images/favicon.ico\'></head>';
+        }
         if(document.URL.indexOf('youtube.com/watch') < 0){
           alert('This is not Youtube video page!');
         }
@@ -30,7 +33,7 @@
       })()
       */
     </script>
-    <title>Youtubedownload bookmarklet by littleThings</title>
+    <title>Bookmarklet by littleThings</title>
   </head>
 
   <body>
@@ -41,11 +44,12 @@
 
     <header>
       <div class="container">
-        <h1>Youtubedownload bookmarklet</h1>
+        <h1>Jordan's Bookmarklets</h1>
         <h2></h2>
         <section id="downloads">
           <center>
-              <a class="btn" href="javascript:(function(){
+              <a class="btn" href="
+      javascript:(function(){
         if(document.URL.indexOf('youtube.com/watch') < 0){
           alert('This is not Youtube video page!');
         }
@@ -73,6 +77,12 @@
           <a href="javascript:(function(){window.open('http://www.clipconverter.cc/', '_blank');})(); ">clipconverter.cc</a> for providing video download service. </br>
         </p>
       </section>
-    </div>   
+    </div>
+
+    <header>
+      123
+    </header>
+
+
   </body>
 </html>
