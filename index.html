@@ -17,72 +17,207 @@
           $('.hint-block').fadeOut('fast');
         })
       });
-      /* bookmarklet code
-      javascript:(function(){
-        var title = window.location.href;
-        if (title.indexOf('http://yourwebsite/bookmarklet/') == 0) {
-            '<head><link rel=\'icon\' href=\'http://static.clipconverter.cc/images/favicon.ico\'></head>';
-        }
-        if(document.URL.indexOf('youtube.com/watch') < 0){
-          alert('This is not Youtube video page!');
-        }
-        else{
-          var win = window.open('http://www.clipconverter.cc/?url=' + document.URL, '_blank');
-          win.focus();  
-        }
-      })()
-      */
-    </script>
+     </script>
     <title>Bookmarklet by littleThings</title>
   </head>
-
+  
   <body>
     <hint class="hint-block">
       <img src="img/arrow-3.png" width="60">
       <div >Drag button to Here!!!</div>      
     </hint>
 
-    <header>
+    <!--#################### Youtube download  #########################-->
+    <feature>
+      <header>
+        <div class="container">
+          <h1>Jordan's Bookmarklets</h1>
+          <h2></h2>
+          <section id="downloads">
+            <center>
+                <a class="btn" href="
+        javascript:(function(){
+          if(document.URL.indexOf('youtube.com/watch') < 0){
+            alert('This is not Youtube video page!');
+          }
+          else{
+            var win = window.open('http://www.clipconverter.cc/?url=' + document.URL, '_blank');
+            win.focus();  
+          }
+        })()
+                ">Download Youtube</a>
+            </center>
+          </section>
+        </div>
+      </header>
+      <script>
+      /* bookmarklet code
+        javascript:(function(){
+          var title = window.location.href;
+          if (title.indexOf('http://yourwebsite/bookmarklet/') == 0) {
+              '<head><link rel=\'icon\' href=\'http://static.clipconverter.cc/images/favicon.ico\'></head>';
+          }
+          if(document.URL.indexOf('youtube.com/watch') < 0){
+            alert('This is not Youtube video page!');
+          }
+          else{
+            var win = window.open('http://www.clipconverter.cc/?url=' + document.URL, '_blank');
+            win.focus();  
+          }
+        })()
+        */
+      </script>
+
       <div class="container">
-        <h1>Jordan's Bookmarklets</h1>
-        <h2></h2>
-        <section id="downloads">
-          <center>
-              <a class="btn" href="
-      javascript:(function(){
-        if(document.URL.indexOf('youtube.com/watch') < 0){
-          alert('This is not Youtube video page!');
-        }
-        else{
-          var win = window.open('http://www.clipconverter.cc/?url=' + document.URL, '_blank');
-          win.focus();  
-        }
-      })()
-              ">Download Youtube</a>
-          </center>
+        <section id="main_content">
+          <h3>Introduction</h3>
+          <p>This is a javascript bookmarklet for downloading Youtube video and MP3.</p>
+
+          <h3>Usage</h3>
+          <p>
+            <ol>
+              <li>Visit a specific video page on Youtube.</li>
+              <li>Click the button. </li>
+              <li>It will pop a new tabs and you can choose the video or MP3 you want to download. </li>
+            </ol>
+          </p>
+
+          <h3>Acknowledgement</h3>
+          <p>
+            <a href="javascript:(function(){window.open('http://www.clipconverter.cc/', '_blank');})(); ">clipconverter.cc</a> for providing video download service. </br>
+          </p>
         </section>
       </div>
-    </header>
+    </feature>
+    <div class="dashline"></div>
 
-    <div class="container">
-      <section id="main_content">
-        <h3>Introduction</h3>
-        <p>This is a javascript bookmarklet for downloading Youtube video and MP3.</p>
 
-        <h3>Usage</h3>
-        <p>Just drag the button above to the bookmark. Once you find an interesting video in Youtube, you can click the button in bookmark to download the video or MP3. It will pop a new tabs and you can choose the video you want to download.</p>
+    <!--#################### Tiny url  #########################-->
+    <feature>
+      <header>
+        <div class="container">
+          <section id="downloads">
+            <center>
+                <a class="btn" href="
+        javascript:(function(){
+            var win = window.open('http://tinyurl.com/create.php?url=' + document.URL, '_blank');
+            win.focus();
+        })()
+                ">Tiny URL</a>
+            </center>
+          </section>
+        </div>
+      </header>
 
-        <h3>Acknowledgement</h3>
-        <p>
-          <a href="javascript:(function(){window.open('http://www.clipconverter.cc/', '_blank');})(); ">clipconverter.cc</a> for providing video download service. </br>
-        </p>
-      </section>
-    </div>
+      <script>
+      /*
+      javascript:(function(){
+            var win = window.open('http://tinyurl.com/create.php?url=' + document.URL, '_blank');
+            win.focus();
+        })()
+      */
+      </script>
+      <div class="container">
+        <section id="main_content">
+          <h3>Introduction</h3>
+          <p>This is a javascript bookmarklet for shorten web url.</p>
 
-    <header>
-      123
-    </header>
+          <h3>Usage</h3>
+          <p>
+            <ol>
+              <li>Visit any web page. </li>
+              <li>Click the button. </li> 
+              <li>There will be a shorten url shows in 
+            <a href="javascript:(function(){window.open('http://tinyurl.com/', '_blank');})(); ">tinyurl.com</a></li>
+            </ol>
+          </p>
 
+          <h3>Acknowledgement</h3>
+          <p>
+            <a href="javascript:(function(){window.open('http://tinyurl.com/', '_blank');})(); ">tinyurl.com</a> for providing shorten url service. </br>
+          </p>
+        </section>
+      </div>
+    </feature>
+    <div class="dashline"></div>
+
+    <!--#################### Google img search  #########################-->
+    <feature>
+      <header>
+        <div class="container">
+          <section id="downloads">
+            <center>
+                <a class="btn" href="
+                javascript:(function(){
+                  var text = '';
+                  if (window.getSelection) {
+                      text = window.getSelection().toString();
+                  } else if (document.selection && document.selection.type !== 'Control') {
+                      text = document.selection.createRange().text;
+                  }
+
+                  if(text !== ''){
+                    var win = window.open('https://www.google.com.tw/search?hl=zh-TW&site=imghp&tbm=isch&source=hp&q=' + text,'_blank');
+                    win.focus();
+                  }
+                  else{
+                    alert('Please hightlight the keyword you want to search!');
+                  }
+                })()
+                ">Google Img Search</a>
+                <!--<button class="gImg">Test</button>-->
+            </center>
+          </section>
+        </div>
+      </header>
+
+      <script>
+      /*
+      javascript:(function(){
+            var win = window.open('http://tinyurl.com/create.php?url=' + document.URL, '_blank');
+            win.focus();
+        })()
+      */
+      $('.gImg').click(function(){
+        var text = "";
+        if (window.getSelection) {
+            text = window.getSelection().toString();
+        } else if (document.selection && document.selection.type !== "Control") {
+            text = document.selection.createRange().text;
+        }
+
+        if(text !== ""){
+          var win = window.open('https://www.google.com.tw/search?hl=zh-TW&site=imghp&tbm=isch&source=hp&q=' + text,'_blank');
+          win.focus();
+        }
+        else{
+          alert('Please hightlight the keyword you want to search!');
+        }
+      });
+      </script>
+      <div class="container">
+        <section id="main_content">
+          <h3>Introduction</h3>
+          <p>This is a javascript bookmarklet for searching on google image search.</p>
+
+          <h3>Usage</h3>
+          <p>
+            <ol>
+              <li>Visit any web page </li> 
+              <li>Selected the text you want to search on 
+            <a href="javascript:(function(){window.open('https://www.google.com.tw/imghp?hl=zh-TW&tab=wi', '_blank');})(); ">Google Image Search</a></li>
+              <li>Click the button. </li>
+              <li>The results will shown on a new tab. </li>
+            </ol>
+          </p>
+
+          <h3>Acknowledgement</h3>
+          <p>
+            <a href="javascript:(function(){window.open('https://www.google.com.tw/imghp?hl=zh-TW&tab=wi', '_blank');})(); ">Google Image Search</a> for providing search service. </br>
+          </p>
+        </section>
+      </div>
+    </feature>
 
   </body>
 </html>

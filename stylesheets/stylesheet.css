@@ -36,11 +36,7 @@ li {
 */
 
 header {
-  background: rgba(0, 0, 0, 0.1);
-  width: 100%;
-  border-bottom: 1px dashed #b5e853;
-  padding: 20px 0;
-  margin: 0 0 40px 0;
+  /*background: rgba(0, 0, 0, 0.1);*/
 }
 
 header h1 {
@@ -80,6 +76,8 @@ header h2 {
 #main_content {
   width: 100%;
   -webkit-font-smoothing: antialiased;
+  background: #1E1E20;
+  padding: 10px;
 }
 section img {
   max-width: 100%
